@@ -48,7 +48,9 @@ def window_average(data: list, n: int) -> list:
         average_list.append(round(average, 2))
         
     return average_list
+    
 
+import statistics
 
 def window_stddev(data: list, n: int) -> list:
     """
@@ -60,7 +62,7 @@ def window_stddev(data: list, n: int) -> list:
     Returns:
         list[int]: A list containing the standard deviations with window size 6
     """
-    import statistics
+    
     if data == []:
         return data
     
