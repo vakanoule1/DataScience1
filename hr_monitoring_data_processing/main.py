@@ -29,14 +29,54 @@ def run(filename: str) -> None:
 
     Returns:
         list[int], list[int], list[int]: You will return the maximums, averages, and stdevs (in this order).
-    """  
+    """
+    # Initializing variable data 
+    if len(data) == 0:
+        return data
     data = []
 
     # open file and read into the `data` list
-    ...
+    file = open(filename)
+    for line in file:
+        data.append(line)
+    file.close
+    #print file
+    print(data)
+    
+    #filter out all non-digits
+    data = filter_nondigits(data)
 
+    #filter out all outliers
+    data = filter_outliers(data)
+
+    #calculate window_max
+    maximum = window_max(data, 6)
+
+    #calculate window_avg
+    avg = window_average(data, 6)
+
+    #calculate window_stdevs
+    tdevs = window_stddev(data, 6)
+
+    #creating lineplots in metaplotlib
+    #import the matplotlib library.
+    # import the pyplot sub-library, to generate charts and plots
+    plt.plot(maximum)
+    plt.savefig('images/maximums.png')
+    plt.close()
+
+    plt.plot(avg)
+    plt.savefig('images/averages.png')
+    plt.close()
+
+    plt.plot(tdevs)
+    plt.savefig('images/stdevs.png')
+    plt.close()
+    
     # return all 3 lists
-    ...
+    return maximum, avg, tdevs  
+ 
+
 
 
 if __name__ == "__main__":
