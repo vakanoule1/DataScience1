@@ -52,7 +52,7 @@ def filter_outliers(data: list) -> list:
      # check if my rate is less or equal to 30 and greater or equal to 250.
         if rate > 30 and rate < 250:
            
-    # if my rate is less than 30 and greater than 250 append it to new_data
+    # if my rate is greater than 30 and less than 250 append it to new_data
            new_data.append(rate)
         else:
             rate = rate
