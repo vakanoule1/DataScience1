@@ -79,7 +79,7 @@ def window_stddev(data: list, n: int) -> list:
         std_dev = statistics.stdev(window_stddev)
 
     # The window_stddev() function computes the standard deviation of the current window
-    # Append it to std_values
+    # Append it to stddev.
         stddev.append(round(std_dev, 2))
         
 
