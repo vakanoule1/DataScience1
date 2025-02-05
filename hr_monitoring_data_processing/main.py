@@ -29,7 +29,11 @@ def run(filename: str) -> None:
 
     Returns:
         list[int], list[int], list[int]: You will return the maximums, averages, and stdevs (in this order).
+<<<<<<< HEAD
     """ 
+=======
+    """
+>>>>>>> 64fda89a9abe3ebca872a2acedf9a3925a4d405a
     # Initializing variable data 
     if len(data) == 0:
         return data
@@ -76,6 +80,11 @@ def run(filename: str) -> None:
     # return all 3 lists
     return maximum, avg, tdevs  
  
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 64fda89a9abe3ebca872a2acedf9a3925a4d405a
 
 if __name__ == "__main__":
     run("data/data1.txt")

@@ -25,6 +25,7 @@ def window_max(data: list, n: int) -> list:
 def window_average(data: list, n: int) -> list:
     """
     Calculate the moving average of 'n'- size parameter
+<<<<<<< HEAD
 
     Args:
         data (list[int]): list of integers representing heart rate samples
@@ -52,7 +53,34 @@ def window_average(data: list, n: int) -> list:
 
 
 import statistics
+=======
+>>>>>>> 64fda89a9abe3ebca872a2acedf9a3925a4d405a
 
+    Args:
+        data (list[int]): list of integers representing heart rate samples
+        n (int): The size of your window
+    Returns:
+        list[int]: the moving average with window size 6
+    """
+    # Program to calclate moving average
+    # Initialize an empty array to hold the resulting data points.
+    average_list = []
+
+    # loop through the original array n - window_size + 1 times.
+    # where n is the initial number of elements.
+    for i in range(0,len(data), n):
+        window = data[i:i + n]
+
+    # Calculate the average of a sequence
+        average = sum(window) / len(window)
+
+    #Append the newly calculated window average to our result array
+        average_list.append(round(average, 2))
+        
+    return average_list
+    
+
+import statistics
 
 def window_stddev(data: list, n: int) -> list:
     """
@@ -83,9 +111,17 @@ def window_stddev(data: list, n: int) -> list:
         std_dev = statistics.stdev(window_stddev)
 
     # The window_stddev() function computes the standard deviation of the current window
+<<<<<<< HEAD
     # Append it to std_values
+=======
+    # Append it to stddev.
+>>>>>>> 64fda89a9abe3ebca872a2acedf9a3925a4d405a
         stddev.append(round(std_dev, 2))
         
 
     # Return the list containing the calculated standard deviattions for neach window 
     return stddev
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64fda89a9abe3ebca872a2acedf9a3925a4d405a
